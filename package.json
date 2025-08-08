@@ -1,0 +1,17 @@
+{
+  "name": "com.sprites.pivotmaker",
+  "version": "1.0.0",
+  "displayName": "Sprite Helper",
+  "description": "批量设置",
+  "unity": "2019.1",
+  "unityRelease": "0b5",
+  "dependencies": {
+ },
+ "keywords": [
+  ],
+  "author": {
+    "name": "HANT",
+    "email": "usys2yyds@outlook.com",
+    "url": "https://www.unity3d.com"
+  }
+}
