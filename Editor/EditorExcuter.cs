@@ -453,21 +453,6 @@ namespace SpriteHelper
             Vector2 size = new Vector2(32, 32);
             Rect pathLabelHeader_rect = new Rect(20, 5, 80, 25);
             Rect pathDrag_rect = new Rect(100, 5, 300, 25);
-
-            //Dictionary<TextureImporterType, List<string>>
-            //private void OnGUI()
-            //{
-            //    #region Path Loader
-            //    GUI.Label(pathLabelHeader_rect, "Path:");
-            //    GUI.TextField(pathDrag_rect, directoryPath);
-            //    if (Event.current.type == EventType.DragExited && pathDrag_rect.Contains(Event.current.mousePosition))
-            //    {
-            //        DragAndDrop.visualMode = DragAndDropVisualMode.Generic;
-            //        directoryPath = DragAndDrop.paths[0];
-            //        Event.current.Use();
-            //    }
-            //    #endregion
-            //}
             void LoadSetting()
             {
                 TextureImporterSettings m_TextureImporterSettings = new TextureImporterSettings()
