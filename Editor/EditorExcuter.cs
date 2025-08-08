@@ -10,13 +10,13 @@ namespace SpriteHelper
 {
     public class EditorExcuter : Editor
     {
-        [MenuItem("Tools/读取任意TextureMeta")]
-        public static void ReadTextureMetaSerilizedObject()
-        {
-            var obj = Selection.objects[0];
-            SerializedObject c = new SerializedObject(obj);
-            Debug.Log(c);
-        }
+        //[MenuItem("Tools/读取任意TextureMeta")]
+        //public static void ReadTextureMetaSerilizedObject()
+        //{
+        //    var obj = Selection.objects[0];
+        //    SerializedObject c = new SerializedObject(obj);
+        //    Debug.Log(c);
+        //}
         public class WindowSetSpritePivot : EditorWindow
         {
             [MenuItem("Tools/批量设置图片Pivot")]
@@ -424,6 +424,7 @@ namespace SpriteHelper
                 }
             }
         }
+        /*
         public class TextureImportSettingWindow : EditorWindow
         {
             [MenuItem("Tools/设置导入图片设置")]
@@ -547,13 +548,16 @@ namespace SpriteHelper
                 public TextureWrapMode __Wrap_Mode_U_axis = TextureWrapMode.Repeat;
                 public TextureWrapMode __Wrap_Mode_V_axis = TextureWrapMode.Repeat;
                 public FilterMode __Filter_Mode = FilterMode.Trilinear;
-                public int __Aniso_Level = 1;/*var showAniso = (FilterMode)m_FilterMode.intValue != FilterMode.Point
-                    && m_EnableMipMap.intValue > 0
-                    && (TextureImporterShape)m_TextureShape.intValue != TextureImporterShape.TextureCube;*/
+                public int __Aniso_Level = 1;
+                //var showAniso = (FilterMode)m_FilterMode.intValue != FilterMode.Point
+                //    && m_EnableMipMap.intValue > 0
+                //    && (TextureImporterShape)m_TextureShape.intValue != TextureImporterShape.TextureCube;
 
             }
         }
+        */
     }
+    /*
     public class TextureImportHelper : AssetPostprocessor
     {
         //图片资源导入前
@@ -668,17 +672,16 @@ namespace SpriteHelper
         }
         public TextureImporterPlatformSettings SetUpOnPostprocessTextureUICompressAndFormat(TextureImporterPlatformSettings platformSettings)
         {
-            /*
-                有一种压缩方式TextureImporterFormat.ETC2_RGBA8Crunched
-                这个压缩格式在iOS上也支持(这是Unity自己改进过的跨平台版本)
-                如果按照ASTC_6x6为基准1的话。 ETC2_RGBA8Crunched压缩过后占用为 1 * (CompressQualify / 100.0f)
-                经过测试ETC2_RGBA8Crunched在CompressQuality=75时对比ASTC_6x6失真不太明显
-                以下时对比数据(RGBA8Crunched是在ETC2_RGBA8(Compressed)基础下再次进行Crunched压缩)
-                在Android上因为对ETC格式有CPU优化所以理论上ETC2_RGBA8Crunched格式优于ASTC
-                ETC2_RGBA8(Compressed) = 5.3M
-                ASTC_6x6 = 2.4M
-                ETC2_RGBA8Crunched(Qualty=100) = 0.8M
-            */
+                //*有一种压缩方式TextureImporterFormat.ETC2_RGBA8Crunched
+                //*这个压缩格式在iOS上也支持(这是Unity自己改进过的跨平台版本)
+                //*如果按照ASTC_6x6为基准1的话。 ETC2_RGBA8Crunched压缩过后占用为 1 * (CompressQualify / 100.0f)
+                //*经过测试ETC2_RGBA8Crunched在CompressQuality=75时对比ASTC_6x6失真不太明显
+                //*以下时对比数据(RGBA8Crunched是在ETC2_RGBA8(Compressed)基础下再次进行Crunched压缩)
+                //*在Android上因为对ETC格式有CPU优化所以理论上ETC2_RGBA8Crunched格式优于ASTC
+                //*ETC2_RGBA8(Compressed) = 5.3M
+                //*ASTC_6x6 = 2.4M
+                //*ETC2_RGBA8Crunched(Qualty=100) = 0.8M
+
             platformSettings.textureCompression = TextureImporterCompression.Compressed;
             platformSettings.format = TextureImporterFormat.ASTC_6x6;
             platformSettings.crunchedCompression = false;
@@ -729,4 +732,6 @@ namespace SpriteHelper
             throw new System.Exception($"Not found UXML file : {windowType.Name}");
         }
     }
+
+    */
 }
